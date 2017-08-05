@@ -1,0 +1,2 @@
+model_checkpoint_path: "/output/model/banglaInceptionM2_1024Hidden.ckpt"
+all_model_checkpoint_paths: "/output/model/banglaInceptionM2_1024Hidden.ckpt"
