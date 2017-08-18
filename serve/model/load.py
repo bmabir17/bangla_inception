@@ -20,3 +20,24 @@ def init():
 	print("Graph and Model Loaded")
 
 	return loaded_model,graph
+
+def init_bangla(modelName):
+	graph=tf.Graph()
+	with graph.as_default():
+		sess=tf.Session()
+		with sess.as_default():
+			if(modelName=="kolkata"):
+				#Loading the meta graph and restore weights
+				saver=tf.train.import_meta_graph('C:/Users/bmabi/GitHub/bangla_inception/serve/model/bangla/banglaInceptionM2_banglaKolkata.ckpt-30000.meta')
+				#saver.restore(sess,tf.train.latest_checkpoint('C:/Users/bmabi/GitHub/bangla_inception/serve/model/'))
+				saver.restore(sess,'C:/Users/bmabi/GitHub/bangla_inception/serve/model/bangla/banglaInceptionM2_banglaKolkata.ckpt-30000')
+			else:
+				#Loading the meta graph and restore weights
+				saver=tf.train.import_meta_graph('C:/Users/bmabi/GitHub/bangla_inception/serve/model/bangla/banglaInception_mini_M2.ckpt-30000.meta')
+				#saver.restore(sess,tf.train.latest_checkpoint('C:/Users/bmabi/GitHub/bangla_inception/serve/model/'))
+				saver.restore(sess,'C:/Users/bmabi/GitHub/bangla_inception/serve/model/bangla/banglaInception_mini_M2.ckpt-30000')
+			tf_input = graph.get_operation_by_name("tf_input").outputs[0]
+			output=graph.get_operation_by_name("output").outputs[0]
+	return sess,tf_input,output
+
+

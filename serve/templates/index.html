@@ -16,7 +16,8 @@
 	</div>
 	<div style="margin-left:175px; margin-top:460px; float:left; position:absolute;">
 		
-		<a href="#" class="myButton"><span style=" font-weight: 400; font-family: 'Open Sans', Helvetica;	"> Predict </span></a>			
+		<a href="#" class="myButton"><span style=" font-weight: 400; font-family: 'Open Sans', Helvetica;	"> Predict </span></a>
+		<a href="#" class="myBangla"><span style=" font-weight: 400; font-family: 'Open Sans', Helvetica;	"> Predict Bangla</span></a>			
 	</div>
 	<div >
 		<h1 id="result" style="margin-right:20px; margin-top:300px;float:left;"><span> </span></h1>
@@ -34,6 +35,23 @@
 			$.ajax({
 				type:"POST",
 				url: $SCRIPT_ROOT + "/predict/",
+				data: img,
+				success: function(data){
+					$('#result').text('Predicted Output:'+data);
+
+				}
+			});
+
+			// body...
+		});
+		$(".myBangla").click(function() {
+
+			var $SCRIPT_ROOT={{request.script_root|tojson|safe }};
+			var canvasObj=document.getElementById('canvas');
+			var img= canvasObj.toDataURL();
+			$.ajax({
+				type:"POST",
+				url: $SCRIPT_ROOT + "/predict_bangla/",
 				data: img,
 				success: function(data){
 					$('#result').text('Predicted Output:'+data);

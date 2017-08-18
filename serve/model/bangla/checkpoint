@@ -1,0 +1,6 @@
+model_checkpoint_path: "/output/banglaInception_mini_M2.ckpt-30000"
+all_model_checkpoint_paths: "/output/banglaInception_mini_M2.ckpt-29600"
+all_model_checkpoint_paths: "/output/banglaInception_mini_M2.ckpt-29700"
+all_model_checkpoint_paths: "/output/banglaInception_mini_M2.ckpt-29800"
+all_model_checkpoint_paths: "/output/banglaInception_mini_M2.ckpt-29900"
+all_model_checkpoint_paths: "/output/banglaInception_mini_M2.ckpt-30000"
