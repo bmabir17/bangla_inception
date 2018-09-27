@@ -39,3 +39,7 @@ alt="MultiFaceTracker_demo1 Video" width="640" height="480" border="1" /></a>
 
      Biswas M, Islam R, Shom GK, Shopon M, Mohammed N, Momen S, Abedin MA (2017) Banglalekha-isolated: a comprehensive bangla handwritten character dataset. arXiv:1703.10661
   
+## Buy me a cup of coffee and help me improve this project
+[![Bitcoin Donate Button](http://bmabir17.github.io/donate/Bitcoin-Donate-button.png)](http://bmabir17.github.io/donate/Bitcoin-Redirect.html)
+
+[![Bitcoin Donate Button](http://bmabir17.github.io/donate/btc_qr.png)]
